@@ -1,0 +1,136 @@
+/* KudoMate Theme - Dark Modern Reward-based */
+:root {
+  --color-main: #FF6B6B;  /* vibrant coral for primary actions */
+  --color-main-light: #ff8585;
+  --color-dark: #1B1B2F;  /* rich navy-dark purple background */
+  --color-dark-medium: #2D3142;  /* card/surface color */
+  --color-dark-light: #363853;
+  --color-light: #F8F9FA;  /* white-ish text */
+  --color-gray: #9BA4B5;
+  --color-light-gray: #CED4DA;
+  --color-bg: var(--color-dark);
+  --color-success: #6BCB77;  /* fresh green */
+  --color-accent: #FFD93D;  /* yellow for kudos/recognition */
+  --color-error: #FF6B6B;
+}
+
+/* Modern Card Styles */
+.roomListRoom {
+  background: var(--color-dark-medium);
+  border: 1px solid var(--color-dark-light);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.roomListRoom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Styling */
+.btn--main {
+  background-color: var(--color-main);
+  color: var(--color-light);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn--main:hover {
+  background-color: var(--color-main-light);
+  transform: translateY(-1px);
+}
+
+/* Success States */
+.tag--success {
+  background-color: var(--color-success) !important;
+  color: var(--color-dark) !important;
+}
+
+/* Accent Elements */
+.profile__info p,
+.header__menu span {
+  color: var(--color-accent);
+}
+
+/* Credits Display */
+.credits-display {
+  background: linear-gradient(135deg, var(--color-main) 0%, var(--color-accent) 100%);
+  color: var(--color-light);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.credits-display svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: currentColor;
+}
+
+/* Task Status Indicators */
+.task-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.task-status.completed {
+  background-color: var(--color-success);
+  color: var(--color-dark);
+}
+
+.task-status.pending {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+/* Updated Form Fields */
+.form__group input:focus,
+.form__group textarea:focus {
+  border-color: var(--color-main);
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.1);
+}
+
+/* Modern Scrollbar */
+.scroll::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--color-dark-medium);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: var(--color-main);
+  border-radius: 1rem;
+}
+
+/* Activity Feed Styling */
+.activities__box {
+  border: 1px solid var(--color-dark-light);
+  background: var(--color-dark-medium);
+  transition: transform 0.2s ease;
+}
+
+.activities__box:hover {
+  transform: translateY(-2px);
+}
+
+/* Navigation Elements */
+.header {
+  background-color: var(--color-dark);
+  border-bottom: 1px solid var(--color-dark-light);
+}
+
+/* Logo Styling */
+.header__logo h1 {
+  background: linear-gradient(135deg, var(--color-main) 0%, var(--color-accent) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}

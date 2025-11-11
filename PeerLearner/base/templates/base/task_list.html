@@ -1,0 +1,59 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<main class="layout layout--3">
+  <div class="container">
+    <!-- Tasks List -->
+    <div class="roomList">
+      <div class="roomList__header">
+        <div>
+          <h2>Your Tasks</h2>
+          <p>Credits Balance: <span style="color: #71c6dd; font-weight: bold;">{{ request.user.credits }}</span></p>
+        </div>
+        <a class="btn btn--main" href="{% url 'create-task' %}">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <title>add</title>
+            <path d="M16.943 0.943h-1.885v14.115h-14.115v1.885h14.115v14.115h1.885v-14.115h14.115v-1.885h-14.115v-14.115z"></path>
+          </svg>
+          Create Task
+        </a>
+      </div>
+
+      {% for task in tasks %}
+      <div class="roomListRoom">
+        <div class="roomListRoom__header">
+          <a href="{% url 'task-detail' task.id %}" class="roomListRoom__title">
+            {{ task.title }}
+          </a>
+          <div class="roomListRoom__actions">
+            {% if task.completed %}
+            <span class="tag tag--pill tag--success">Completed</span>
+            {% else %}
+            <span class="tag tag--pill tag--warning">In Progress</span>
+            {% endif %}
+          </div>
+        </div>
+        <div class="roomListRoom__content">
+          <p>{{ task.description|truncatechars:100 }}</p>
+          <div class="roomListRoom__meta">
+            <div>
+              <span class="tag tag--pill">Reward: {{ task.reward }}</span>
+              <span class="tag tag--pill tag--secondary">Penalty: {{ task.penalty }}</span>
+            </div>
+            {% if task.due_date %}
+            <span>Due: {{ task.due_date|date:"M d, Y" }}</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="roomListRoom">
+        <div class="roomListRoom__content">
+          <p>No tasks yet. Create your first task to start earning credits!</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</main>
+{% endblock %}
