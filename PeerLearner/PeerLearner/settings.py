@@ -1,20 +1,13 @@
-# Django settings for PeerLearner project.
-
-
-import os
 from pathlib import Path
-from django.core.management.utils import get_random_secret_key
-
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-3#av2c6nptlbbb6^muqkchu&fe3wv&n$t2+g$v!ir-f5%doocb')
+SECRET_KEY = 'django-insecure-3#av2c6nptlbbb6^muqkchu&fe3wv&n$t2+g$v!ir-f5%doocb'
 
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
-
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -27,16 +20,16 @@ INSTALLED_APPS = [
     'base.apps.BaseConfig',
 
     'rest_framework',
-    'corsheaders',
+    "corsheaders",
 ]
-
 
 AUTH_USER_MODEL = 'base.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+
+    "corsheaders.middleware.CorsMiddleware",
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -67,7 +60,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'PeerLearner.wsgi.application'
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -75,29 +67,33 @@ DATABASES = {
     }
 }
 
-DATABASE_URL = os.environ.get('DATABASE_URL')
-if DATABASE_URL:
-    try:
-        import dj_database_url
-
-        DATABASES['default'] = dj_database_url.parse(DATABASE_URL, conn_max_age=600)
-    except Exception:
-        pass
-
-
-# Password validation
 AUTH_PASSWORD_VALIDATORS = [
-    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
 ]
 
+
 LANGUAGE_CODE = 'en-us'
+
 TIME_ZONE = 'UTC'
+
 USE_I18N = True
+
 USE_L10N = True
+
 USE_TZ = True
+
+
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
@@ -105,16 +101,15 @@ MEDIA_URL = '/images/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
+
+# STATIC_ROOT =
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 CORS_ALLOW_ALL_ORIGINS = True
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 

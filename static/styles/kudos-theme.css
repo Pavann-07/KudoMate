@@ -1,156 +1,156 @@
 /* KudoMate Theme - Fresh & Positive */
 :root {
-  --color-main: #4CAF50;  /* Fresh green for primary actions */
-  --color-main-light: #81C784;  /* Lighter green for hover states */
-  --color-dark: #1B5E20;  /* Dark green for contrast elements */
-  --color-dark-medium: #2E7D32;  /* Medium green for accents */
-  --color-dark-light: #388E3C;  /* Light-medium green */
-  --color-light: #FFFFFF;  /* Pure white */
-  --color-gray: #E8F5E9;  /* Very light green tint */
-  --color-light-gray: #F1F8E9;  /* Barely green white */
-  --color-bg: var(--color-light);  /* White background */
-  --color-success: #66BB6A;  /* Confirmation green */
-  --color-accent: #C8E6C9;  /* Soft green for highlights */
-  --color-error: #EF5350;  /* Red for errors */
+   --color-main: #4CAF50;  /* Fresh green for primary actions */
+   --color-main-light: #81C784;  /* Lighter green for hover states */
+   --color-dark: #1B5E20;  /* Dark green for contrast elements */
+   --color-dark-medium: #2E7D32;  /* Medium green for accents */
+   --color-dark-light: #388E3C;  /* Light-medium green */
+   --color-light: #FFFFFF;  /* Pure white */
+   --color-gray: #E8F5E9;  /* Very light green tint */
+   --color-light-gray: #F1F8E9;  /* Barely green white */
+   --color-bg: var(--color-light);  /* White background */
+   --color-success: #66BB6A;  /* Confirmation green */
+   --color-accent: #C8E6C9;  /* Soft green for highlights */
+   --color-error: #EF5350;  /* Red for errors */
 }
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-dark);
+   background-color: var(--color-bg);
+   color: var(--color-dark);
 }
 
 /* Card Styles */
 .roomListRoom {
-  background: var(--color-light);
-  border: 1px solid var(--color-accent);
-  box-shadow: 0 2px 4px rgba(76, 175, 80, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+   background: var(--color-light);
+   border: 1px solid var(--color-accent);
+   box-shadow: 0 2px 4px rgba(76, 175, 80, 0.1);
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .roomListRoom:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.15);
+   transform: translateY(-2px);
+   box-shadow: 0 4px 8px rgba(76, 175, 80, 0.15);
 }
 
 /* Button Styling */
 .btn--main {
-  background-color: var(--color-main);
-  color: var(--color-light);
-  font-weight: 600;
-  transition: all 0.3s ease;
+   background-color: var(--color-main);
+   color: var(--color-light);
+   font-weight: 600;
+   transition: all 0.3s ease;
 }
 
 .btn--main:hover {
-  background-color: var(--color-main-light);
-  transform: translateY(-1px);
+   background-color: var(--color-main-light);
+   transform: translateY(-1px);
 }
 
 /* Header & Navigation */
 .header {
-  background-color: var(--color-light);
-  border-bottom: 1px solid var(--color-accent);
+   background-color: var(--color-light);
+   border-bottom: 1px solid var(--color-accent);
 }
 
 .header__logo h1 {
-  color: var(--color-main);
-  font-weight: 700;
+   color: var(--color-main);
+   font-weight: 700;
 }
 
 /* Form Elements */
 .form__group input,
 .form__group textarea {
-  border: 1px solid var(--color-accent);
-  background: var(--color-light);
+   border: 1px solid var(--color-accent);
+   background: var(--color-light);
 }
 
 .form__group input:focus,
 .form__group textarea:focus {
-  border-color: var(--color-main);
-  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+   border-color: var(--color-main);
+   box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
 }
 
 /* Success States */
 .tag--success {
-  background-color: var(--color-success) !important;
-  color: var(--color-light) !important;
+   background-color: var(--color-success) !important;
+   color: var(--color-light) !important;
 }
 
 /* Credits Display */
 .credits-display {
-  background: linear-gradient(135deg, var(--color-main) 0%, var(--color-main-light) 100%);
-  color: var(--color-light);
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+   background: linear-gradient(135deg, var(--color-main) 0%, var(--color-main-light) 100%);
+   color: var(--color-light);
+   padding: 0.5rem 1rem;
+   border-radius: 2rem;
+   font-weight: 600;
+   display: inline-flex;
+   align-items: center;
+   gap: 0.5rem;
 }
 
 .credits-display svg {
-  width: 1.6rem;
-  height: 1.6rem;
-  fill: currentColor;
+   width: 1.6rem;
+   height: 1.6rem;
+   fill: currentColor;
 }
 
 /* Task Status Indicators */
 .task-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 1rem;
-  border-radius: 2rem;
-  font-size: 1.2rem;
-  font-weight: 600;
+   display: inline-flex;
+   align-items: center;
+   gap: 0.5rem;
+   padding: 0.4rem 1rem;
+   border-radius: 2rem;
+   font-size: 1.2rem;
+   font-weight: 600;
 }
 
 .task-status.completed {
-  background-color: var(--color-success);
-  color: var(--color-light);
+   background-color: var(--color-success);
+   color: var(--color-light);
 }
 
 .task-status.pending {
-  background-color: var(--color-accent);
-  color: var(--color-dark);
+   background-color: var(--color-accent);
+   color: var(--color-dark);
 }
 
 /* Activity Feed */
 .activities__box {
-  background: var(--color-light);
-  border: 1px solid var(--color-accent);
-  box-shadow: 0 2px 4px rgba(76, 175, 80, 0.05);
+   background: var(--color-light);
+   border: 1px solid var(--color-accent);
+   box-shadow: 0 2px 4px rgba(76, 175, 80, 0.05);
 }
 
 /* Topics */
 .topics__header {
-  background-color: var(--color-accent);
-  color: var(--color-dark);
+   background-color: var(--color-accent);
+   color: var(--color-dark);
 }
 
 /* Messages */
 .alert {
-  background-color: var(--color-accent);
-  color: var(--color-dark);
-  border: 1px solid var(--color-main-light);
+   background-color: var(--color-accent);
+   color: var(--color-dark);
+   border: 1px solid var(--color-main-light);
 }
 
 /* Scrollbar */
 .scroll::-webkit-scrollbar {
-  width: 0.6rem;
-  background-color: var(--color-light-gray);
+   width: 0.6rem;
+   background-color: var(--color-light-gray);
 }
 
 .scroll::-webkit-scrollbar-thumb {
-  background-color: var(--color-main);
-  border-radius: 1rem;
+   background-color: var(--color-main);
+   border-radius: 1rem;
 }
 
 /* Links */
 a {
-  color: var(--color-main);
-  transition: color 0.2s ease;
+   color: var(--color-main);
+   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--color-main-light);
+   color: var(--color-main-light);
 }
